@@ -75,7 +75,7 @@ router.get('/callback', async (req, res) => {
       accessToken: data.access_token
     });
 
-    res.redirect("http://localhost:3000");
+    res.send("Salesforce Login Successful");
 
   } catch (err) {
 
