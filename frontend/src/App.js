@@ -7,7 +7,7 @@ function App() {
   const [rules, setRules] = useState([]);
 
   const login = () => {
-    window.location.href = "http://localhost:5000/api/login";
+    window.location.href = "https://salesforce-validation-rule-manager-kjms.onrender.com/api/login";
   };
 
   const fetchRules = async () => {
@@ -15,7 +15,7 @@ function App() {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/validation-rules"
+        "https://salesforce-validation-rule-manager-kjms.onrender.com/api/validation-rules"
       );
 
       setRules(res.data);
@@ -33,7 +33,7 @@ function App() {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/toggle-rule",
+        "https://salesforce-validation-rule-manager-kjms.onrender.com/api/toggle-rule",
         {
           fullName: id,
           active: !currentStatus
